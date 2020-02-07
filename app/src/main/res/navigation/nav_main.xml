@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/gifFragment">
+
+    <fragment
+        android:id="@+id/gifFragment"
+        android:name="com.example.giphyapp.view.GifFragment"
+        android:label="fragment_gif"
+        tools:layout="@layout/fragment_gif" >
+        <action
+            android:id="@+id/action_gifFragment_to_fullGifFragment"
+            app:destination="@id/fullGifFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fullGifFragment"
+        android:name="com.example.giphyapp.view.FullGifFragment"
+        android:label="fragment_full_gif"
+        tools:layout="@layout/fragment_full_gif" >
+        <argument
+            android:name="gifUrl"
+            app:argType="string" />
+    </fragment>
+</navigation>
